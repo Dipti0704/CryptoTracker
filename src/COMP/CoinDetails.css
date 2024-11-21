@@ -1,0 +1,47 @@
+/* Styles for the wrapper to position the arrow next to text */
+.stat-arrow {
+  display: flex;
+  align-items: center;
+  font-size: 1em; /* Adjust font size as needed */
+  color: green; /* Set color for increase, adjust accordingly */
+}
+
+.stat-arrow.decrease {
+  color: red; /* Set color for decrease */
+}
+
+/* Styles for the up arrow */
+.stat-arrow::before {
+  content: "";
+  display: inline-block;
+  margin-right: 0.2em; /* Space between arrow and text */
+  width: 0;
+  height: 0;
+  border-left: 5px solid transparent;
+  border-right: 5px solid transparent;
+  border-bottom: 8px solid currentColor; /* Arrow color matches text */
+}
+
+.stat-arrow.decrease::before {
+  border-bottom: none;
+  border-top: 8px solid currentColor; /* Down arrow style */
+}
+
+.progress-bar-container {
+  width: 80vw;          /* Full width */
+  height: 8px;          /* Adjust height as needed */
+  background-color: #e2e8f0; /* Light gray background color */
+  border-radius: 4px;    /* Rounded corners */
+  overflow: hidden;      /* Clips the overflowing part of the progress bar */
+}
+
+.progress-bar {
+  height: 100%;
+  width: 100%;           /* Initial width; adjust based on progress value */
+  background-color: teal; /* Teal color to mimic Chakra UI’s colorScheme="teal" */
+  transition: width 0.4s ease; /* Smooth transition for width change */
+}
+h1{
+  text-align: center;
+  height: 50vh;
+}
